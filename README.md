@@ -29,4 +29,4 @@ To view or contribute to the project, follow these steps:
 
 1. **Clone the Repository**:
    ```bash
-   git clone https://github.com/yourusername/greenden.git
+   {(https://ssdharaneedharan.github.io/Greenden/)}
