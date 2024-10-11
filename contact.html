@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Greenden</title>
+    <!-- Tailwind CSS CDN Link -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Responsive Nav Bar -->
+    <nav class="bg-green-100 p-3 flex items-center justify-between shadow-xl sticky top-0 z-10">
+        <h1 class="text-2xl">Greenden</h1>
+
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+            class="w-6 h-6 md:hidden">
+            <path stroke-linecap="round" stroke-linejoin="round"
+                d="M3.75 5.25h16.5m-16.5 4.5h16.5m-16.5 4.5h16.5m-16.5 4.5h16.5" />
+        </svg>
+
+        <ul class="gap-5 text-black-100 hidden md:flex">
+            <li>
+                <a class="hover:underline hover:text-black" href="index.html">Home</a>
+            </li>
+            <li>
+                <a class="hover:underline hover:text-black" href="product.html">Product</a>
+            </li>
+            <li>
+                <a class="hover:underline hover:text-black" href="contact.html">Contact</a>
+            </li>
+        </ul>
+    </nav>
+
+    <!-- Contact Form -->
+    <section class="bg-white dark:bg-gray-900">
+        <div class="py-8 lg:py-16 px-4 mx-auto max-w-screen-md">
+            <h2 class="mb-4 text-4xl tracking-tight font-extrabold text-center text-gray-900 dark:text-white">Contact Us
+            </h2>
+            <p class="mb-8 lg:mb-16 font-light text-center text-gray-500 dark:text-gray-400 sm:text-xl">We’re here to
+                help you cultivate your love for plants! Whether you have questions about our plant varieties, need care
+                tips, or want to discuss custom orders, we’d love to hear from you.
+
+                Please fill out the form with your details, and our team will get back to you as soon as possible. Your
+                journey into the world of greenery starts here, and we’re excited to assist you!</p>
+
+            <form id="contact-form" class="space-y-8" onsubmit="handleSubmit(event)">
+                <div>
+                    <label for="email" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Your
+                        email</label>
+                    <input type="email" id="email"
+                        class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light"
+                        placeholder="name@Greenden.com" required>
+                </div>
+                <div>
+                    <label for="subject"
+                        class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Subject</label>
+                    <input type="text" id="subject"
+                        class="block p-3 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 shadow-sm focus:ring-primary-500 focus:border-primary-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light"
+                        placeholder="Let us know how we can help you" required>
+                </div>
+                <div class="sm:col-span-2">
+                    <label for="message" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-400">Your
+                        message</label>
+                    <textarea id="message" rows="6"
+                        class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg shadow-sm border border-gray-300 focus:ring-primary-500 focus:border-primary-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
+                        placeholder="Leave a comment..."></textarea>
+                </div>
+
+                <div class="m-3 p-4 text-center mx-auto max-w-sm">
+                    <button type="submit" class="text-white bg-green-500 hover:bg-green-700 px-4 py-2 rounded">Submit</button>
+                </div>
+            </form>
+
+            <div id="success-message" class="hidden mt-8 text-center text-green-500">
+                <h3 class="text-lg font-semibold">Thank you for your query!</h3>
+                <p>Our team will respond quickly to assist you. 🌱</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <section class="bg-green-100 p-10 mt-5">
+        <h1 class="text-4xl font-bold mt-2">Greenden</h1>
+        <p>🌿 "Welcome to our plant haven! Here, we celebrate the beauty and diversity of nature, bringing you a vibrant
+            selection of plants that inspire joy and tranquility. Join us on this green journey and let’s grow
+            together!" 🌼</p>
+        <p>@2024 Greenden.com</p>
+    </section>
+
+    <!-- Script Of Submission -->
+    <script>
+        function handleSubmit(event) {
+            event.preventDefault(); 
+            document.getElementById("contact-form").reset(); 
+            document.getElementById("success-message").classList.remove("hidden"); 
+        }
+    </script>
+</body>
+
+</html>
