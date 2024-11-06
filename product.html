@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Greenden</title>
-    <!-- Tailwing Css CDN Link -->
+    <!-- Tailwind CSS CDN Link -->
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
 </head>
 
@@ -15,16 +15,15 @@
     <nav class="bg-green-100 p-3 flex items-center justify-between shadow-xl sticky top-0 z-10">
         <h1 class="text-2xl">Greenden</h1>
 
-        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
-            class="w-6 h-6 md:hidden">
+        <svg id="menu-toggle" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+            class="w-6 h-6 md:hidden cursor-pointer">
             <path stroke-linecap="round" stroke-linejoin="round"
                 d="M3.75 5.25h16.5m-16.5 4.5h16.5m-16.5 4.5h16.5m-16.5 4.5h16.5" />
         </svg>
 
-
         <ul class="gap-5 text-black-100 hidden md:flex">
             <li>
-                <a class="hover:underline hover:text-black" href="index.html">HOME</a>
+                <a class="hover:underline hover:text-black" href="index.html">Home</a>
             </li>
             <li>
                 <a class="hover:underline hover:text-black" href="product.html">Product</a>
@@ -34,6 +33,23 @@
             </li>
         </ul>
     </nav>
+
+    <!-- Side Navigation for Mobile Screens -->
+    <section id="sidenav"
+        class="bg-green-50 fixed top-0 right-0 w-64 h-full p-5 shadow-xl transform translate-x-full transition-transform duration-300 z-20 md:hidden">
+        <button id="close-sidenav" class="text-right text-2xl mb-5 font-bold">&times;</button>
+        <ul class="flex flex-col gap-5 text-black-100">
+            <li>
+                <a class="hover:underline hover:text-black" href="index.html">Home</a>
+            </li>
+            <li>
+                <a class="hover:underline hover:text-black" href="product.html">Product</a>
+            </li>
+            <li>
+                <a class="hover:underline hover:text-black" href="contact.html">Contact</a>
+            </li>
+        </ul>
+    </section>
 
     <!-- search bar section -->
     <section>
@@ -62,44 +78,44 @@
             </div>
 
             <div>
-                <img src="PRoduct Plant Image No (2).png" class="inline hover:shadow-xl w-52 h-52 rounded transform hover:-translate-y-2"
-                    alt="Reload">
+                <img src="PRoduct Plant Image No (2).png"
+                    class="inline hover:shadow-xl w-52 h-52 rounded transform hover:-translate-y-2" alt="Reload">
                 <h1 class="font-bold">🌿Ficus Bonsai🌿</h1>
             </div>
 
             <div>
-                <img src="PRoduct Plant Image No (3).png" class="inline hover:shadow-xl w-52 h-52 rounded transform hover:-translate-y-2"
-                    alt="Reload">
+                <img src="PRoduct Plant Image No (3).png"
+                    class="inline hover:shadow-xl w-52 h-52 rounded transform hover:-translate-y-2" alt="Reload">
                 <h1 class="font-bold">🌿Unique Foliage Plant🌿</h1>
             </div>
 
             <div>
-                <img src="PRoduct Plant Image No (4).png" class="inline hover:shadow-xl w-52 h-52 rounded transform hover:-translate-y-2"
-                    alt="Reload">
+                <img src="PRoduct Plant Image No (4).png"
+                    class="inline hover:shadow-xl w-52 h-52 rounded transform hover:-translate-y-2" alt="Reload">
                 <h1 class="font-bold">🌿Tillandsia🌿</h1>
             </div>
 
             <div>
-                <img src="PRoduct Plant Image No (5).png" class="inline hover:shadow-xl w-52 h-52 rounded transform hover:-translate-y-2"
-                    alt="Reload">
+                <img src="PRoduct Plant Image No (5).png"
+                    class="inline hover:shadow-xl w-52 h-52 rounded transform hover:-translate-y-2" alt="Reload">
                 <h1 class="font-bold">🌿Saguaro Cactus🌿</h1>
             </div>
 
             <div>
-                <img src="PRoduct Plant Image No (6).png" class="inline hover:shadow-xl w-52 h-52 rounded transform hover:-translate-y-2"
-                    alt="Reload">
+                <img src="PRoduct Plant Image No (6).png"
+                    class="inline hover:shadow-xl w-52 h-52 rounded transform hover:-translate-y-2" alt="Reload">
                 <h1 class="font-bold">🌿Peace Lily🌿</h1>
             </div>
 
             <div>
-                <img src="PRoduct Plant Image No (7).png" class="inline hover:shadow-xl w-52 h-52 rounded transform hover:-translate-y-2"
-                    alt="Reload">
+                <img src="PRoduct Plant Image No (7).png"
+                    class="inline hover:shadow-xl w-52 h-52 rounded transform hover:-translate-y-2" alt="Reload">
                 <h1 class="font-bold">🌿Fiddle Leaf Fig🌿</h1>
             </div>
 
             <div>
-                <img src="PRoduct Plant Image No (8).png" class="inline hover:shadow-xl w-52 h-52 rounded transform hover:-translate-y-2"
-                    alt="Reload">
+                <img src="PRoduct Plant Image No (8).png"
+                    class="inline hover:shadow-xl w-52 h-52 rounded transform hover:-translate-y-2" alt="Reload">
                 <h1 class="font-bold">🌿Table Plant Spot 🌿</h1>
             </div>
 
@@ -111,46 +127,68 @@
             </div>
 
             <div>
-                <img src="PRoduct Plant Image No (2).png" class="inline hover:shadow-xl w-52 h-52 rounded transform hover:-translate-y-2"
-                    alt="Reload">
+                <img src="PRoduct Plant Image No (2).png"
+                    class="inline hover:shadow-xl w-52 h-52 rounded transform hover:-translate-y-2" alt="Reload">
                 <h1 class="font-bold">🌿Coastal Pine🌿</h1>
             </div>
 
             <div>
-                <img src="PRoduct Plant Image No (3).png" class="inline hover:shadow-xl w-52 h-52 rounded transform hover:-translate-y-2"
-                    alt="Reload">
+                <img src="PRoduct Plant Image No (3).png"
+                    class="inline hover:shadow-xl w-52 h-52 rounded transform hover:-translate-y-2" alt="Reload">
                 <h1 class="font-bold">🌿Lavender Marigold🌿</h1>
             </div>
 
             <div>
-                <img src="PRoduct Plant Image No (4).png" class="inline hover:shadow-xl w-52 h-52 rounded transform hover:-translate-y-2"
-                    alt="Reload">
+                <img src="PRoduct Plant Image No (4).png"
+                    class="inline hover:shadow-xl w-52 h-52 rounded transform hover:-translate-y-2" alt="Reload">
                 <h1 class="font-bold">🌿Sea Lavender🌿</h1>
             </div>
 
             <div>
-                <img src="PRoduct Plant Image No (5).png" class="inline hover:shadow-xl w-52 h-52 rounded transform hover:-translate-y-2"
-                    alt="Reload">
+                <img src="PRoduct Plant Image No (5).png"
+                    class="inline hover:shadow-xl w-52 h-52 rounded transform hover:-translate-y-2" alt="Reload">
                 <h1 class="font-bold">🌿Sea Oats🌿</h1>
             </div>
 
             <div>
-                <img src="PRoduct Plant Image No (6).png" class="inline hover:shadow-xl w-52 h-52 rounded transform hover:-translate-y-2"
-                    alt="Reload">
+                <img src="PRoduct Plant Image No (6).png"
+                    class="inline hover:shadow-xl w-52 h-52 rounded transform hover:-translate-y-2" alt="Reload">
                 <h1 class="font-bold">🌿Lavender🌿</h1>
             </div>
 
             <div>
-                <img src="PRoduct Plant Image No (7).png" class="inline hover:shadow-xl w-52 h-52 rounded transform hover:-translate-y-2"
-                    alt="Reload">
+                <img src="PRoduct Plant Image No (7).png"
+                    class="inline hover:shadow-xl w-52 h-52 rounded transform hover:-translate-y-2" alt="Reload">
                 <h1 class="font-bold">🌿Aloe Vera🌿</h1>
             </div>
 
             <div>
-                <img src="PRoduct Plant Image No (8).png" class="inline hover:shadow-xl w-52 h-52 rounded transform hover:-translate-y-2"
-                    alt="Reload">
+                <img src="PRoduct Plant Image No (8).png"
+                    class="inline hover:shadow-xl w-52 h-52 rounded transform hover:-translate-y-2" alt="Reload">
                 <h1 class="font-bold">🌿Succulent🌿</h1>
             </div>
 
         </div>
+
+        <!-- JavaScript for Sidenav -->
+        <script>
+            // Elements
+            const menuToggle = document.getElementById('menu-toggle');
+            const sidenav = document.getElementById('sidenav');
+            const closeSidenav = document.getElementById('close-sidenav');
+
+            // Open sidenav
+            menuToggle.addEventListener('click', () => {
+                sidenav.classList.remove('translate-x-full');
+            });
+
+            // Close sidenav
+            closeSidenav.addEventListener('click', () => {
+                sidenav.classList.add('translate-x-full');
+            });
+        </script>
+
     </section>
+</body>
+
+</html>

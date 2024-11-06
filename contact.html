@@ -14,8 +14,9 @@
     <nav class="bg-green-100 p-3 flex items-center justify-between shadow-xl sticky top-0 z-10">
         <h1 class="text-2xl">Greenden</h1>
 
-        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
-            class="w-6 h-6 md:hidden">
+        <!-- Added id="menu-toggle" for JS targeting -->
+        <svg id="menu-toggle" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+            stroke="currentColor" class="w-6 h-6 md:hidden cursor-pointer">
             <path stroke-linecap="round" stroke-linejoin="round"
                 d="M3.75 5.25h16.5m-16.5 4.5h16.5m-16.5 4.5h16.5m-16.5 4.5h16.5" />
         </svg>
@@ -32,6 +33,23 @@
             </li>
         </ul>
     </nav>
+
+    <!-- Side Navigation for Mobile Screens -->
+    <section id="sidenav"
+        class="bg-green-50 fixed top-0 right-0 w-64 h-full p-5 shadow-xl transform translate-x-full transition-transform duration-300 z-20 md:hidden">
+        <button id="close-sidenav" class="text-right text-2xl mb-5 font-bold">&times;</button>
+        <ul class="flex flex-col gap-5 text-black-100">
+            <li>
+                <a class="hover:underline hover:text-black" href="index.html">Home</a>
+            </li>
+            <li>
+                <a class="hover:underline hover:text-black" href="product.html">Product</a>
+            </li>
+            <li>
+                <a class="hover:underline hover:text-black" href="contact.html">Contact</a>
+            </li>
+        </ul>
+    </section>
 
     <!-- Contact Form -->
     <section class="bg-white dark:bg-gray-900">
@@ -82,21 +100,44 @@
 
     <!-- Footer -->
     <section class="bg-green-100 p-10 mt-5">
-        <h1 class="text-4xl font-bold mt-2">Greenden</h1>
+        <h1 class="text-4xl font-bold mt-2">Greenden</h1><br>
         <p>🌿 "Welcome to our plant haven! Here, we celebrate the beauty and diversity of nature, bringing you a vibrant
             selection of plants that inspire joy and tranquility. Join us on this green journey and let’s grow
-            together!" 🌼</p>
+            together!" 🌼</p><br>
         <p>@2024 Greenden.com</p>
     </section>
 
     <!-- Script Of Submission -->
     <script>
-        function handleSubmit(event) {
-            event.preventDefault(); 
-            document.getElementById("contact-form").reset(); 
-            document.getElementById("success-message").classList.remove("hidden"); 
-        }
+        document.addEventListener("DOMContentLoaded", function () {
+            // Handle form submission
+            function handleSubmit(event) {
+                event.preventDefault();
+                document.getElementById("contact-form").reset();
+                document.getElementById("success-message").classList.remove("hidden");
+            }
+    
+            // Elements
+            const menuToggle = document.getElementById('menu-toggle');
+            const sidenav = document.getElementById('sidenav');
+            const closeSidenav = document.getElementById('close-sidenav');
+    
+            if (menuToggle && sidenav && closeSidenav) {
+                // Open sidenav
+                menuToggle.addEventListener('click', () => {
+                    sidenav.classList.remove('translate-x-full');
+                    menuToggle.setAttribute('aria-expanded', 'true');
+                });
+    
+                // Close sidenav
+                closeSidenav.addEventListener('click', () => {
+                    sidenav.classList.add('translate-x-full');
+                    menuToggle.setAttribute('aria-expanded', 'false');
+                });
+            }
+        });
     </script>
+    
 </body>
 
 </html>

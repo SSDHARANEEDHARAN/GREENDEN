@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Greenden</title>
-    <!-- Tailwing Css CDN Link -->
+    <!-- Tailwind CSS CDN Link -->
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
 </head>
 
@@ -14,13 +14,16 @@
     <nav class="bg-green-100 p-3 flex items-center justify-between shadow-xl sticky top-0 z-10">
         <h1 class="text-2xl">Greenden</h1>
 
-        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
-            class="w-6 h-6 md:hidden">
-            <path stroke-linecap="round" stroke-linejoin="round"
-                d="M3.75 5.25h16.5m-16.5 4.5h16.5m-16.5 4.5h16.5m-16.5 4.5h16.5" />
-        </svg>
+        <!-- Menu Toggle Button for Mobile -->
+        <button id="menu-toggle" class="md:hidden">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                stroke="currentColor" class="w-6 h-6">
+                <path stroke-linecap="round" stroke-linejoin="round"
+                    d="M3.75 5.25h16.5m-16.5 4.5h16.5m-16.5 4.5h16.5m-16.5 4.5h16.5" />
+            </svg>
+        </button>
 
-
+        <!-- Main Menu for Desktop Screens -->
         <ul class="gap-5 text-black-100 hidden md:flex">
             <li>
                 <a class="hover:underline hover:text-black" href="index.html">Home</a>
@@ -34,174 +37,161 @@
         </ul>
     </nav>
 
-    <!-- header section -->
+    <!-- Side Navigation for Mobile Screens -->
+    <section id="sidenav"
+        class="bg-green-50 fixed top-0 right-0 w-64 h-full p-5 shadow-xl transform translate-x-full transition-transform duration-300 z-20 md:hidden">
+        <button id="close-sidenav" class="text-right text-2xl mb-5 font-bold">&times;</button>
+        <ul class="flex flex-col gap-5 text-black-100">
+            <li>
+                <a class="hover:underline hover:text-black" href="index.html">Home</a>
+            </li>
+            <li>
+                <a class="hover:underline hover:text-black" href="product.html">Product</a>
+            </li>
+            <li>
+                <a class="hover:underline hover:text-black" href="contact.html">Contact</a>
+            </li>
+        </ul>
+    </section>
+
+    <!-- Header Section -->
     <section class="bg-green-100 p-4 flex justify-center">
         <div>
-            <p class="mb-4">we offer you a wide range of Artifigal and natural Flowers</p>
+            <p class="mb-4">We offer you a wide range of Artificial and Natural Flowers</p>
             <h2 class="font-bold text-3xl mb-5">Plant For Your Interior</h2>
             <div>
-                <button class="bg-black rounded p-2 text-white"> Shop Now </button>
-                <button class="border border-black rounded p-2"> Watch video </button>
+                <button class="bg-black rounded p-2 text-white">Shop Now</button>
+                <button class="border border-black rounded p-2">Watch Video</button>
             </div>
 
-            <p class="mt-5">160+ Plant Species | 100+ Clints | 100+ Happy Customer</p>
+            <p class="mt-5">160+ Plant Species | 100+ Clients | 100+ Happy Customers</p>
         </div>
 
-        <div class="hidden md:block p-2 ml-5 ">
+        <div class="hidden md:block p-2 ml-5">
             <img class="w-48 h-48" src="Main banner.jpg" alt="Reload">
         </div>
     </section>
 
-    <!-- About section -->
+    <!-- About Section -->
     <section class="text-center">
-        <h1 class="text-3xl font blot mt-5">About Us?</h1>
-        <p>This site for those who admire the beauty and harmony of nature</p>
+        <h1 class="text-3xl font-bold mt-5">About Us?</h1>
+        <p>This site is for those who admire the beauty and harmony of nature</p>
 
-        <div class="md:flex">
-            <div class="border border-black p-2 m-6">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                    stroke="currentColor" class="size-6 inline w-10 h-10">
-                    <path stroke-linecap="round" stroke-linejoin="round"
-                        d="m16.862 4.487 1.687-1.688a1.875 1.875 0 1 1 2.652 2.652L10.582 16.07a4.5 4.5 0 0 1-1.897 1.13L6 18l.8-2.685a4.5 4.5 0 0 1 1.13-1.897l8.932-8.931Zm0 0L19.5 7.125M18 14v4.75A2.25 2.25 0 0 1 15.75 21H5.25A2.25 2.25 0 0 1 3 18.75V8.25A2.25 2.25 0 0 1 5.25 6H10" />
-                </svg>
-
-                <h2 class=" text-xl font-medium">Large Assortment</h2>
+        <div class="md:flex md:justify-center">
+            <div class="border border-black p-2 m-6 flex-1">
+                <h2 class="text-xl font-medium">Large Assortment</h2>
                 <p>Foliage Plants: A variety of leafy greens like ferns, philodendrons, and rubber plants.
-                    Flowering Plants: Options that bloom, such as orchids, bromeliads, and African violets.
-                    Succulents and Cacti: An extensive collection for those who prefer low-maintenance options.
                     Herbs: A range of culinary herbs for kitchen gardening, like basil, mint, and rosemary.</p>
             </div>
-            <div class="border border-black p-2 m-6">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                    stroke="currentColor" class="size-6 inline w-10 h-10">
-                    <path stroke-linecap="round" stroke-linejoin="round"
-                        d="M19.5 12c0-1.232-.046-2.453-.138-3.662a4.006 4.006 0 0 0-3.7-3.7 48.678 48.678 0 0 0-7.324 0 4.006 4.006 0 0 0-3.7 3.7c-.017.22-.032.441-.046.662M19.5 12l3-3m-3 3-3-3m-12 3c0 1.232.046 2.453.138 3.662a4.006 4.006 0 0 0 3.7 3.7 48.656 48.656 0 0 0 7.324 0 4.006 4.006 0 0 0 3.7-3.7c.017-.22.032-.441.046-.662M4.5 12l3 3m-3-3-3 3" />
-                </svg>
-
-                <h2 class=" text-xl font-medium">Fast and Free Shipping</h2>
-                <p>Foliage Plants: A variety of leafy greens like ferns, philodendrons, and rubber plants.
-                    Flowering Plants: Options that bloom, such as orchids, bromeliads, and African violets.
-                    Succulents and Cacti: An extensive collection for those who prefer low-maintenance options.
-                    Herbs: A range of culinary herbs for kitchen gardening, like basil, mint, and rosemary.</p>
+            <div class="border border-black p-2 m-6 flex-1">
+                <h2 class="text-xl font-medium">Fast and Free Shipping</h2>
+                <p>We offer fast and free shipping for all types of plants to make sure they arrive fresh and ready to
+                    flourish.</p>
             </div>
-            <div class="border border-black p-2 m-6">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                    stroke="currentColor" class="size-6 inline w-10 h-10">
-                    <path stroke-linecap="round" stroke-linejoin="round"
-                        d="M20.25 8.511c.884.284 1.5 1.128 1.5 2.097v4.286c0 1.136-.847 2.1-1.98 2.193-.34.027-.68.052-1.02.072v3.091l-3-3c-1.354 0-2.694-.055-4.02-.163a2.115 2.115 0 0 1-.825-.242m9.345-8.334a2.126 2.126 0 0 0-.476-.095 48.64 48.64 0 0 0-8.048 0c-1.131.094-1.976 1.057-1.976 2.192v4.286c0 .837.46 1.58 1.155 1.951m9.345-8.334V6.637c0-1.621-1.152-3.026-2.76-3.235A48.455 48.455 0 0 0 11.25 3c-2.115 0-4.198.137-6.24.402-1.608.209-2.76 1.614-2.76 3.235v6.226c0 1.621 1.152 3.026 2.76 3.235.577.075 1.157.14 1.74.194V21l4.155-4.155" />
-                </svg>
-
-                <h2 class=" text-xl font-medium">24/7 Support</h2>
-                <p>Foliage Plants: A variety of leafy greens like ferns, philodendrons, and rubber plants.
-                    Flowering Plants: Options that bloom, such as orchids, bromeliads, and African violets.
-                    Succulents and Cacti: An extensive collection for those who prefer low-maintenance options.
-                    Herbs: A range of culinary herbs for kitchen gardening, like basil, mint, and rosemary.</p>
+            <div class="border border-black p-2 m-6 flex-1">
+                <h2 class="text-xl font-medium">24/7 Support</h2>
+                <p>Our customer service is available around the clock to assist with any questions or concerns you may
+                    have.</p>
             </div>
         </div>
     </section>
 
-    <!-- Best seller -->
-    <section class="p-4 text-center">
-        <h1 class="font-bold mt-5 text-3xl"></h1>
 
+    <!-- Best Seller Section -->
+    <section class="p-4 text-center">
+        <h1 class="font-bold mt-5 text-3xl">Best Sellers</h1>
         <div class="grid grid-cols-2 md:grid-cols-4 mt-5 gap-5">
             <div>
-                <img src="Plant Pot .png"
-                    class="inline hover:shadow-xl box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px; transform hover:-translate-y-2"
-                    alt="Reload">
-                <h1 class="font-bold">🌿House interier PLant🌿</h1>
+                <img src="Plant Pot .png" class="inline hover:shadow-xl transform hover:-translate-y-2"
+                    alt="House Interior Plant">
+                <h1 class="font-bold">🌿House Interior Plant🌿</h1>
                 <p>$125</p>
             </div>
-
             <div>
                 <img src="Table plant.png" class="inline hover:shadow-xl transform hover:-translate-y-2"
-                    alt="Reload">
-                <h1 class="font-bold">🌿Table PLant🌿</h1>
+                    alt="Table Plant">
+                <h1 class="font-bold">🌿Table Plant🌿</h1>
                 <p>$225</p>
             </div>
-
             <div>
                 <img src="Line table Plant.png" class="inline hover:shadow-xl transform hover:-translate-y-2"
-                    alt="Reload">
-                <h1 class="font-bold">🌿Table pot PLant🌿</h1>
+                    alt="Table Pot Plant">
+                <h1 class="font-bold">🌿Table Pot Plant🌿</h1>
                 <p>$325</p>
             </div>
-
             <div>
                 <img src="Pic Table Plant.png" class="inline hover:shadow-xl transform hover:-translate-y-2"
-                    alt="Reload">
-                <h1 class="font-bold">🌿PLant Clip🌿</h1>
+                    alt="Plant Clip">
+                <h1 class="font-bold">🌿Plant Clip🌿</h1>
                 <p>$525</p>
             </div>
         </div>
-
     </section>
 
-    <!-- Customer Review -->
+    <!-- Customer Review Section -->
     <section class="text-center font-bold text-3xl">
-        <div>
-            <h1>Customer Reviews</h1>
-        </div>
+        <h1>Customer Reviews</h1>
     </section>
 
     <!-- Customer Review Rows -->
     <section>
-        <div class="bg-green-700 text-black p-5 mt-5 mr-10 ml-10 grid items-center rounded justify-center">
-            <p>
-                “I’ve ordered twice now, and I plan to keep coming back for more. Highly recommend!”
-            </p>
+        <div class="bg-green-700 text-black p-5 mt-5 mx-10 grid items-center rounded justify-center">
+            <p>“I’ve ordered twice now, and I plan to keep coming back for more. Highly recommend!”</p>
             <h3 class="text-center text-pink-300">Thara.ss</h3>
         </div>
-
-        <div class="bg-green-700 text-black p-5 mt-5 mr-10 ml-10 grid items-center rounded justify-center">
-            <p>
-                “I sent a succulent as a gift, and my friend loved it! It arrived beautifully packaged.”
-            </p>
+        <div class="bg-green-700 text-black p-5 mt-5 mx-10 grid items-center rounded justify-center">
+            <p>“I sent a succulent as a gift, and my friend loved it! It arrived beautifully packaged.”</p>
             <h3 class="text-center text-pink-300">Tharanee.ss</h3>
         </div>
-
-        <div class="bg-green-700 text-black p-5 mt-5 mr-10 ml-10 grid items-center rounded justify-center">
-            <p>
-                “The website was super easy to navigate. I found exactly what I was looking for without any hassle.”
-            </p>
+        <div class="bg-green-700 text-black p-5 mt-5 mx-10 grid items-center rounded justify-center">
+            <p>“The website was super easy to navigate. I found exactly what I was looking for without any hassle.”</p>
             <h3 class="text-center text-pink-300">Tharan.ss</h3>
         </div>
-
-        <div class="bg-green-700 text-black p-5 mt-5 mr-10 ml-10 grid items-center rounded justify-center">
-            <p>
-                “I’m absolutely thrilled with my purchase. Everything exceeded my expectations!”
-            </p>
+        <div class="bg-green-700 text-black p-5 mt-5 mx-10 grid items-center rounded justify-center">
+            <p>“I’m absolutely thrilled with my purchase. Everything exceeded my expectations!”</p>
             <h3 class="text-center text-pink-300">Tharun.ss</h3>
         </div>
     </section>
 
-    <!-- Search Bar bottom -->
+    <!-- Search Bar Bottom -->
     <section>
         <div class="text-center m-3">
-            <h2 class="text-center m-1 font-bold text-3xl">Join Our News Letter</h2>
-            <p>Signup For Our Email Newspaper To Get Exclusive Discount, Update, And More</p>
+            <h2 class="text-center m-1 font-bold text-3xl">Join Our Newsletter</h2>
+            <p>Signup For Our Email Newsletter To Get Exclusive Discounts, Updates, and More</p>
         </div>
-
         <div class="flex justify-center mt-5">
             <div class="relative w-1/2">
                 <input type="text" placeholder="Search..."
                     class="border border-green-300 rounded py-2 px-4 focus:outline-none focus:ring-2 focus:ring-green-500 w-full" />
             </div>
         </div>
-
         <div class="m-3 p-4 text-center mx-auto max-w-sm">
             <button class="text-white bg-green-500 hover:bg-green-700 px-4 py-2 rounded">Subscribe</button>
         </div>
     </section>
 
     <!-- Footer -->
-    <section class="bg-green-100 p-10 mt-5">
-        <h1 class="text-4xl font-bold mt-2">Greenden</h1>
-        <p>🌿 "Welcome to our plant haven! Here, we celebrate the beauty and diversity of nature, bringing you a vibrant
-            selection of plants that inspire joy and tranquility. Join us on this green journey and let’s grow
-            together!" 🌼</p>
-        <p>@2024  Gareenday.com</p>
-    </section>
+    <footer class="bg-green-100 text-center text-sm p-4">
+        <p>&copy; 2024 Greenden. All rights reserved.</p>
+    </footer>
+
+    <!-- JavaScript for Sidenav -->
+    <script>
+        // Elements
+        const menuToggle = document.getElementById('menu-toggle');
+        const sidenav = document.getElementById('sidenav');
+        const closeSidenav = document.getElementById('close-sidenav');
+
+        // Open sidenav
+        menuToggle.addEventListener('click', () => {
+            sidenav.classList.remove('translate-x-full');
+        });
+
+        // Close sidenav
+        closeSidenav.addEventListener('click', () => {
+            sidenav.classList.add('translate-x-full');
+        });
+    </script>
 </body>
 
 </html>
